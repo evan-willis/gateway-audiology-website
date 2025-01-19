@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets"
+import headphones from "../assets/headphones.png"
+---
+
+<div id="container">
+  <h2>About Us</h2>
+  <Image src={headphones} alt="headphones" height={500} />
+  <h3 style="width: 75%; text-align: center;">
+    Gateway Audiology was established in 2019 and utilizes a personalized
+    approach to provide hearing healthcare to school children in the greater
+    Milwaukee area.
+  </h3>
+
+  <button>
+    <a href="mailto:gatewayaudiology@gmail.com">Contact Us</a>
+  </button>
+</div>
+
+<style>
+  #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+</style>

@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets"
+import logo from "../assets/logo.png"
+import { ClientRouter } from "astro:transitions"
+---
+
+<html>
+  <head>
+    <ClientRouter />
+  </head>
+  <div id="container">
+    <!-- logo aligned to the left side -->
+    <div id="logo">
+      <Image src={logo} alt="logo" height={50} />
+    </div>
+    <!-- navigation aligned to the right side -->
+    <div id="nav">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <style>
+      #container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        z-index: 1000; /* Ensure it stays above other content */
+      }
+
+      nav ul {
+        display: flex;
+        gap: 2rem;
+        list-style-type: none;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      /* Add some top padding to the body to prevent content from being hidden under the fixed header */
+      body {
+        padding-top: 2rem; /* Adjust based on the height of your header */
+      }
+    </style>
+  </div>
+</html>
