@@ -6,31 +6,38 @@ import profile from "../assets/profile-2.jpg"
 <div id="container">
   <div id="welcome">
     <div>
-      <h1 style={{ fontSize: "5rem" }}>WELCOME TO GATEWAY AUDIOLOGY</h1>
-      <h2>Facilitating Access to Listening and Learning</h2>
+      <h1 class="welcome-title">WELCOME TO GATEWAY AUDIOLOGY</h1>
+      <h2 class="welcome-title-sm">
+        Facilitating Access to Listening and Learning
+      </h2>
     </div>
 
-    <div class="parent-div" style="height:600px; width:600px;">
-      <Image src={profile} alt="profile" height={2000} />
+    <div class="parent-div">
+      <Image
+        src={profile}
+        alt="profile"
+        style="max-width: 100%; height: auto;"
+        class="profile"
+      />
     </div>
   </div>
 </div>
 
 <style>
   #container {
+    margin-top: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
 
   #welcome {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    padding: 5rem;
+    text-align: center;
   }
+
   a {
     text-decoration: none;
     color: #2a7b6f;
@@ -42,8 +49,36 @@ import profile from "../assets/profile-2.jpg"
     background-color: #2a7b6f;
   }
 
+  .welcome-title {
+    font-size: 5vw;
+  }
+
+  .welcome-title-sm {
+    font-size: 4vw;
+  }
+
   .parent-div {
-    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+
+  @media (max-width: 600px) {
+    .profile {
+      width: 100%;
+      height: auto;
+    }
+
+    #welcome {
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .profile {
+      width: 500px;
+      height: auto;
+    }
   }
 
   .parent-div img {

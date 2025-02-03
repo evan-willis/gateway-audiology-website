@@ -5,7 +5,12 @@ import headphones from "../assets/headphones.png"
 
 <div id="container">
   <h2>About Us</h2>
-  <Image src={headphones} alt="headphones" height={500} />
+  <Image
+    src={headphones}
+    alt="headphones"
+    class="headphones"
+    style="max-width: 100%; height: auto;"
+  />
   <h3 style="width: 75%; text-align: center;">
     Gateway Audiology was established in 2019 and utilizes a personalized
     approach to provide hearing healthcare to school children in the greater
@@ -23,6 +28,11 @@ import headphones from "../assets/headphones.png"
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+  }
+
+  @media (min-width: 600px) {
+    #container {
+      margin-top: 10rem;
+    }
   }
 </style>

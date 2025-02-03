@@ -8,25 +8,41 @@ import linkedin from "../assets/linkedin.png"
 
 <Layout>
   <Header />
-  <div class="card" style="display: flex;">
-    <div class="parent-div" style="width:33%; margin-right:2rem;">
-      <Image src={profile} alt="profile" width={1000} />
-    </div>
-    <div style="width: 66%;">
-      <h1>Hello</h1>
-      <p style="font-size: larger;">
-        Gateway Audiology was founded by Shelley Willis in 2019 and utilizes a
-        personalized approach to provide hearing healthcare to school children
-        in the greater Milwaukee area.
-      </p>
-      <div class="parent-div" style="width:10%; margin-top:5rem;">
-        <a
-          href="https://www.linkedin.com/in/shelley-willis-aa59b272/"
-          target="_blank"
-          rel="noopener noreferrer"
+  <div class="card">
+    <h1>Hello!</h1>
+    <div style="flex-wrap: wrap;">
+      <div
+        style="display: flex; flex-direction: column; justify-content: center; align-items: center; flex: 1 1 50%;"
+      >
+        <div class="parent-div">
+          <Image
+            src={profile}
+            alt="profile"
+            style="width: 100%; max-width: 300px;"
+          />
+        </div>
+
+        <p style="font-size: larger;">
+          Gateway Audiology was founded by Shelley Willis in 2019 and utilizes a
+          personalized approach to provide hearing healthcare to school children
+          in the greater Milwaukee area.
+        </p>
+        <div
+          class="parent-div"
+          style="width: 100%; margin-top: 5rem; display: flex; justify-content: center;"
         >
-          <Image src={linkedin} alt="linkedin" width={500} />
-        </a>
+          <a
+            href="https://www.linkedin.com/in/shelley-willis-aa59b272/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={linkedin}
+              alt="linkedin"
+              style="width: 100%; max-width: 100px;"
+            />
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -79,6 +95,12 @@ import linkedin from "../assets/linkedin.png"
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+      .card div {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </Layout>
