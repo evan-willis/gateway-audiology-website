@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "@fontsource-variable/raleway": "^5.1.1",
-    "astro": "^5.2.3"
+    "astro": "^5.5.6"
   }
 }
